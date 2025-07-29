@@ -64,13 +64,13 @@ if __name__ == "__main__":
         , r'(NetCracker)': 'Austromyrtus'
         , r'(NETCRACKER)': 'AUSTROMYRTUS'
         , r'(_NC_)': '_AM_'
-        , r'(com/netcracker)': '(ru/austromyrtus)'
+        , r'"(com/netcracker/)"gm': 'ru/austromyrtus/'
     }
     directory_replacements = {
         r'\b(com)' : 'ru'
         , r'\b(netcracker)': 'austromyrtus'
     }
-    file_types_to_process = ['.txt', '.java', '.sql', '.sqt', '.html', '.xml', '.jsp', '.list']
-    rename_files_by_regex(target_directory, directory_replacements)
-    rename_files_by_regex(target_directory, directory_replacements)
-    #replace_text_in_files(target_directory, files_replacements, file_types_to_process)
+    file_types_to_process = ['.txt', '.java', '.sql', '.sqt', '.html', '.xml', '.jsp', '.list', '.lst']
+    #rename_files_by_regex(target_directory, directory_replacements)
+    #rename_files_by_regex(target_directory, directory_replacements)
+    replace_text_in_files(target_directory, files_replacements, file_types_to_process)
